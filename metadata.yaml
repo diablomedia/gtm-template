@@ -1,0 +1,7 @@
+homepage: "https://diablomedia.com/"
+documentation: "https://diablomedia.com/google-tag-manager/"
+versions:
+  # Latest version
+  - sha: 45bd83e2c45e04b891adaaf7a497b2498385518a
+    changeNotes: Initial release
+  # Older versions
