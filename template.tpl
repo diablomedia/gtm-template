@@ -13,8 +13,8 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Diablo Media Tag Placement",
   "categories": ["AFFILIATE_MARKETING", "ADVERTISING", "TAG_MANAGEMENT"],
+  "displayName": "Diablo Media Tag Placement",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -36,99 +36,23 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Please consult with your Diablo Media Account Manager to request the correct values for your offer."
   },
   {
-    "type": "SELECT",
+    "type": "TEXT",
     "name": "domain",
-    "displayName": "Domain",
-    "macrosInSelect": false,
-    "selectItems": [
-      {
-        "value": "z52x.com",
-        "displayValue": "z52x.com"
-      },
-      {
-        "value": "rj0a.com",
-        "displayValue": "rj0a.com"
-      },
-      {
-        "value": "x5j7.com",
-        "displayValue": "x5j7.com"
-      },
-      {
-        "value": "o0qh.com",
-        "displayValue": "o0qh.com"
-      },
-      {
-        "value": "j52t.com",
-        "displayValue": "j52t.com"
-      },
-      {
-        "value": "c8ae.com",
-        "displayValue": "c8ae.com"
-      },
-      {
-        "value": "z5aa.com",
-        "displayValue": "z5aa.com"
-      },
-      {
-        "value": "h0on.com",
-        "displayValue": "h0on.com"
-      },
-      {
-        "value": "x8vp.com",
-        "displayValue": "x8vp.com"
-      },
-      {
-        "value": "u42a.com",
-        "displayValue": "u42a.com"
-      },
-      {
-        "value": "g37n.com",
-        "displayValue": "g37n.com"
-      },
-      {
-        "value": "uq1k.com",
-        "displayValue": "uq1k.com"
-      },
-      {
-        "value": "f3y1.com",
-        "displayValue": "f3y1.com"
-      },
-      {
-        "value": "b9u7.com",
-        "displayValue": "b9u7.com"
-      },
-      {
-        "value": "b31e.com",
-        "displayValue": "b31e.com"
-      },
-      {
-        "value": "h7fn.com",
-        "displayValue": "h7fn.com"
-      },
-      {
-        "value": "vqz0.com",
-        "displayValue": "vqz0.com"
-      },
-      {
-        "value": "v42p.com",
-        "displayValue": "v42p.com"
-      },
-      {
-        "value": "vd9h.com",
-        "displayValue": "vd9h.com"
-      },
-      {
-        "value": "lo4c.com",
-        "displayValue": "lo4c.com"
-      }
-    ],
+    "displayName": "Tracking Domain",
     "simpleValueType": true,
-    "notSetText": "Please select",
+    "valueHint": "diablo-tracking-domain.com",
     "valueValidators": [
       {
         "type": "NON_EMPTY"
+      },
+      {
+        "type": "REGEX",
+        "args": [
+          "^(z52x.com|rj0a.com|x5j7.com|o0qh.com|j52t.com|c8ae.com|z5aa.com|h0on.com|x8vp.com|u42a.com|g37n.com|uq1k.com|f3y1.com|b9u7.com|b31e.com|h7fn.com|vqz0.com|v42p.com|vd9h.com|lo4c.com)$"
+        ]
       }
-    ]
+    ],
+    "help": "Please contact your account manager to get the appropriate tracking domain for your offer."
   },
   {
     "type": "TEXT",
@@ -143,7 +67,8 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "valueHint": "1234"
+    "valueHint": "1234",
+    "help": "Please contact your account manager to get the appropriate campaign ID for your offer."
   },
   {
     "type": "TEXT",
@@ -349,7 +274,6 @@ scenarios:
   code: |-
     const queryPermission = require('queryPermission');
 
-    // TODO: Possible to query this from the pulldown field's defined values?
     const domains = [
       'z52x.com',
       'rj0a.com',
@@ -406,6 +330,6 @@ setup: ''
 
 ___NOTES___
 
-Created on 1/31/2020, 1:16:39 PM
+Created on 2/3/2020, 9:17:39 AM
 
 
